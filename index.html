@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f6f5f0">
+  <meta name="description" content="Интерактивная презентация об оценивании эффективности СРС и СРСП: теория, кейсы и практические задания.">
+  <title>СРС / СРСП — От задания к результату</title>
+  <link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+</head>
+<body>
+  <header class="header"><a class="brand" href="#intro" aria-label="На главную"><span class="brand-mark">с<span>р</span>с</span><span class="brand-caption">ПЕДАГОГИКА<br>ВЫСШЕЙ ШКОЛЫ</span></a><div class="header-right"><span class="live-dot"></span><span>Интерактивная презентация</span><button id="present" class="icon-button" title="Полноэкранный режим" aria-label="Полноэкранный режим">⛶</button></div></header>
+  <div class="app-shell">
+    <aside class="sidebar"><div><p class="eyebrow">ТЕМА 07</p><p class="sidebar-title">Оценивание<br>эффективности<br>СРС и СРСП</p></div><nav id="navigation" aria-label="Разделы презентации"></nav><div class="sidebar-bottom"><span class="mini-orbit">✳</span><p>Меньше формальности.<br>Больше осмысленного обучения.</p><div class="course-progress"><span id="course-progress"></span></div><small id="progress-label">Начните знакомство с темой</small></div></aside>
+    <main id="main" tabindex="-1"></main>
+  </div>
+  <footer class="footer"><span>УЧИМСЯ ОЦЕНИВАТЬ, ЧТОБЫ УЧИТЬСЯ ЛУЧШЕ</span><div><span class="key-hint">← →</span> навигация по разделам <span class="footer-page" id="page-count">01 / 06</span></div></footer>
+  <dialog id="timer-dialog"><button class="close-dialog icon-button" aria-label="Закрыть таймер">×</button><p class="eyebrow">ВРЕМЯ НА ОБСУЖДЕНИЕ</p><h2>Дайте идеям время.</h2><div id="timer-display">03:00</div><div class="timer-presets"><button data-minutes="1">1 мин</button><button data-minutes="3" class="selected">3 мин</button><button data-minutes="5">5 мин</button></div><button id="timer-start" class="button dark">Запустить</button><button id="timer-reset" class="text-button">Сбросить</button><p id="timer-status" role="status"></p></dialog>
+</body>
+</html>
