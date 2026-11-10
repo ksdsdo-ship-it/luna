@@ -1,19 +1,18 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#f6f5f0">
-  <meta name="description" content="Интерактивная презентация об оценивании эффективности СРС и СРСП: теория, кейсы и практические задания.">
-  <title>СРС / СРСП — От задания к результату</title>
-  <link rel="stylesheet" href="style.css"><script src="app.js" defer></script>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#101c22"><meta name="description" content="Миссия: справедливая оценка. Интерактивная образовательная игра об оценивании эффективности СРС и СРСП.">
+<title>МИССИЯ: СПРАВЕДЛИВАЯ ОЦЕНКА</title><link rel="stylesheet" href="style.css"><script src="mission-data.js" defer></script><script src="app.js" defer></script>
 </head>
 <body>
-  <header class="header"><a class="brand" href="#intro" aria-label="На главную"><span class="brand-mark">с<span>р</span>с</span><span class="brand-caption">ПЕДАГОГИКА<br>ВЫСШЕЙ ШКОЛЫ</span></a><div class="header-right"><span class="live-dot"></span><span>Интерактивная презентация</span><button id="present" class="icon-button" title="Полноэкранный режим" aria-label="Полноэкранный режим">⛶</button></div></header>
-  <div class="app-shell">
-    <aside class="sidebar"><div><p class="eyebrow">ТЕМА 07</p><p class="sidebar-title">Оценивание<br>эффективности<br>СРС и СРСП</p></div><nav id="navigation" aria-label="Разделы презентации"></nav><div class="sidebar-bottom"><span class="mini-orbit">✳</span><p>Меньше формальности.<br>Больше осмысленного обучения.</p><div class="course-progress"><span id="course-progress"></span></div><small id="progress-label">Начните знакомство с темой</small></div></aside>
-    <main id="main" tabindex="-1"></main>
-  </div>
-  <footer class="footer"><span>УЧИМСЯ ОЦЕНИВАТЬ, ЧТОБЫ УЧИТЬСЯ ЛУЧШЕ</span><div><span class="key-hint">← →</span> навигация по разделам <span class="footer-page" id="page-count">01 / 06</span></div></footer>
-  <dialog id="timer-dialog"><button class="close-dialog icon-button" aria-label="Закрыть таймер">×</button><p class="eyebrow">ВРЕМЯ НА ОБСУЖДЕНИЕ</p><h2>Дайте идеям время.</h2><div id="timer-display">03:00</div><div class="timer-presets"><button data-minutes="1">1 мин</button><button data-minutes="3" class="selected">3 мин</button><button data-minutes="5">5 мин</button></div><button id="timer-start" class="button dark">Запустить</button><button id="timer-reset" class="text-button">Сбросить</button><p id="timer-status" role="status"></p></dialog>
-</body>
-</html>
+<a class="skip-link" href="#main">Перейти к содержанию</a>
+<header class="header"><a href="#intro" class="brand" aria-label="Миссия: справедливая оценка — начало"><span class="brand-symbol">м<span>:</span></span><span>ЭКСПЕРТНАЯ<br>КОМИССИЯ</span></a><div class="header-center">ПЕДАГОГИКА ВЫСШЕЙ ШКОЛЫ <span>/</span> ТЕМА 07</div><div class="header-actions"><button id="mode-toggle" class="mode-toggle" aria-pressed="false">Режим: игра ⇄</button><button id="fullscreen" class="icon-button" aria-label="Полноэкранный режим" title="Полноэкранный режим (F)">⛶</button></div></header>
+<div class="workspace"><aside class="sidebar"><div class="sidebar-top"><span class="eyebrow">ВАША МИССИЯ</span><h2>Справедливая<br>оценка</h2><button class="map-link" data-go="map">Карта миссии <span>↗</span></button></div><nav id="navigation" aria-label="Этапы миссии"></nav><div class="mission-status"><div class="status-label"><span>Прогресс миссии</span><strong id="progress-number">0 / 4</strong></div><div class="progress-track" id="progress-track" role="progressbar" aria-label="Завершённые уровни" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><span id="progress-bar"></span></div><div class="xp-row"><span class="xp-icon" aria-hidden="true">✧</span><strong id="xp-number">0</strong><span>/ 100 XP</span></div><p>Баллы за решения.<br>Развитие — за размышления.</p><button id="reset-open" class="reset-link">Сбросить прогресс</button></div></aside><main id="main" tabindex="-1"></main></div>
+<footer class="footer"><span>СРС / СРСП — ОТ ЗАДАНИЯ К РАЗВИТИЮ</span><div><kbd>←</kbd><kbd>→</kbd><span>разделы</span><kbd>F</kbd><span>полный экран</span><span id="save-status">Сохраняется на этом устройстве</span></div></footer>
+<div id="announcement" class="sr-only" role="status" aria-live="polite"></div>
+<dialog id="briefing-dialog" aria-labelledby="briefing-title"><div class="dialog-mark">01 — 04</div><p class="eyebrow">ДОБРО ПОЖАЛОВАТЬ В КОМИССИЮ</p><h2 id="briefing-title">Ваша оценка<br>имеет значение.</h2><p>Вы — эксперт образовательной комиссии. Вам предстоит пройти 4 этапа, изучить методы оценивания и решить педагогические ситуации.</p><div class="briefing-rules"><span>01 <b>Исследуйте теорию</b></span><span>02 <b>Примите решение</b></span><span>03 <b>Обсудите последствия</b></span></div><p class="dialog-note">До 100 XP за прохождение и решения. Задания без однозначного ответа дают баллы за участие, а не за «нужную» оценку.</p><button class="button primary" id="accept-briefing">Перейти к карте ↗</button></dialog>
+<dialog id="reset-dialog" aria-labelledby="reset-title"><p class="eyebrow">НОВАЯ ПОПЫТКА</p><h2 id="reset-title">Начать с чистого листа?</h2><p>Сбросятся решения, баллы и заметки этой миссии. Можно сначала скачать заметки на экране итогов.</p><div class="dialog-actions"><button class="button primary" id="reset-confirm">Пройти заново</button><button class="button secondary" data-close="reset-dialog">Продолжить миссию</button></div></dialog>
+<dialog id="timer-dialog" aria-labelledby="timer-title"><button class="dialog-close icon-button" data-close="timer-dialog" aria-label="Закрыть таймер">×</button><p class="eyebrow">ОБСУЖДЕНИЕ В ГРУППЕ</p><h2 id="timer-title">Время для аргументов.</h2><div id="timer-display" role="timer" aria-live="off">03:00</div><div class="timer-presets"><button data-minutes="1">1 мин</button><button data-minutes="3">3 мин</button><button data-minutes="5">5 мин</button></div><div class="dialog-actions"><button class="button primary" id="timer-start">Запустить</button><button class="button secondary" id="timer-reset">Сбросить</button></div><p id="timer-status" role="status"></p></dialog>
+<noscript><p>Включите JavaScript для работы интерактивной миссии.</p></noscript>
+</body></html>
